@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SMA PERTIWI MEDAN</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/sekolah/assets/icon/pertiwi.png" type="image/png" />
+
+    <!-- Google Fonts (Pastikan font tampil rapi seperti sebelumnya) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <!-- Main CSS (path fix, sesuai struktur kamu di C:\xampp\htdocs\sekolah\dist\css\style.css) -->
+    <link rel="stylesheet" href="/sekolah/dist/css/style.css?v=1762594712" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container header-container">
+        <div class="logo">
+          <img
+            src="/sekolah/assets/images/sma.svg"
+            alt="Logo SMA Pertiwi Medan"
+          />
+        </div>
+
+        <!-- NAV MENU -->
+        <nav>
+          <ul class="menu">
+            <li><a href="/sekolah/index.html">Beranda</a></li>
+
+            <li class="dropdown">
+              <a href="#">Profil <i class="fa-solid fa-caret-down"></i></a>
+              <ul class="submenu">
+                <li><a href="/sekolah/profil.html">Profil Sekolah</a></li>
+                <li><a href="/sekolah/visimisi.html">Visi & Misi</a></li>
+                <li>
+                  <a href="/sekolah/tenagapendidik.html">Tenaga Pendidik</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#">Informasi <i class="fa-solid fa-caret-down"></i></a>
+              <ul class="submenu">
+                <li><a href="/sekolah/artikel.html">Artikel</a></li>
+                <li><a href="/sekolah/kalender.html">Kalender</a></li>
+              </ul>
+            </li>
+
+            <li><a href="/sekolah/kontak.html">Kontak</a></li>
+
+            <li>
+              <a href="/sekolah/spmb.html" class="btn-daftar">
+                <i class="fa-solid fa-graduation-cap"></i> SPMB
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- Hero / Banner Artikel -->
+      <section class="artikel-hero">
+        <img src="assets/images/prestasi.jpeg" alt="Judul Artikel" />
+        <div class="overlay"></div>
+        <div class="hero-text">
+          <span class="artikel-tag">Berita</span>
+          <h1>SMA Pertiwi Raih Prestasi Tingkat Nasional</h1>
+          <p class="artikel-meta">
+            Ditulis oleh <strong>Admin SMA Pertiwi</strong> • 16 Februari 2025
+          </p>
+        </div>
+      </section>
+
+      <!-- Konten Artikel -->
+      <section class="artikel-detail">
+        <div class="content">
+          <p>
+            SMA Pertiwi kembali menorehkan prestasi gemilang dengan berhasil
+            meraih juara umum dalam kompetisi tingkat nasional. Kompetisi ini
+            diikuti oleh puluhan sekolah unggulan dari berbagai daerah.
+          </p>
+          <p>
+            Kepala Sekolah SMA Pertiwi menyampaikan rasa bangga atas pencapaian
+            ini, serta mengapresiasi kerja keras para siswa dan guru pembimbing.
+            Prestasi ini diharapkan dapat menjadi motivasi bagi seluruh siswa
+            untuk terus berprestasi baik di bidang akademik maupun non-akademik.
+          </p>
+          <p>
+            Kompetisi ini melibatkan berbagai bidang lomba, seperti olimpiade
+            matematika, sains, olahraga, dan seni. SMA Pertiwi berhasil meraih
+            beberapa medali emas dan perak sehingga mengantarkan sekolah menjadi
+            juara umum.
+          </p>
+          <p>
+            Ke depannya, SMA Pertiwi akan terus mendorong siswanya untuk berani
+            mencoba, berinovasi, serta berprestasi di tingkat nasional maupun
+            internasional.
+          </p>
+        </div>
+      </section>
+
+      <!-- Navigasi -->
+      <div class="artikel-nav">
+        <a href="artikel.html" class="back-btn">← Kembali ke Artikel</a>
+      </div>
+    </main>
+
+    <!-- footer.html -->
+    <footer>
+      <div class="container">
+        <div class="footer-box">
+          <div class="box">
+            <h2>Sosial Media</h2>
+            <p>
+              SMA Pertiwi Medan hadir di berbagai media sosial sebagai sarana
+              komunikasi dan informasi.
+            </p>
+            <div class="sosial">
+              <a href="#"
+                ><img src="assets/images/facebook.png" alt="facebook"
+              /></a>
+              <a href="#"
+                ><img src="assets/images/instagram.png" alt="instagram"
+              /></a>
+              <a href="#"
+                ><img src="assets/images/youtube.png" alt="youtube"
+              /></a>
+            </div>
+          </div>
+          <div class="box">
+            <h2>Kontak</h2>
+            <p>
+              <img src="assets/images/gmail.png" alt="gmail" />
+              smaspertiwimedan@gmail.com
+            </p>
+            <p>
+              <img src="assets/images/whatsapp.png" alt="whatsapp" />
+              0813-6229-1258
+            </p>
+            <p>
+              <img src="assets/images/map.png" alt="map" /> Jalan Budi Persatuan
+              No.1, Medan Barat
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="dist/js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

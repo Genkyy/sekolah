@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SMA PERTIWI MEDAN</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/sekolah/assets/icon/pertiwi.png" type="image/png" />
+
+    <!-- Google Fonts (Pastikan font tampil rapi seperti sebelumnya) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <!-- Main CSS (path fix, sesuai struktur kamu di C:\xampp\htdocs\sekolah\dist\css\style.css) -->
+    <link rel="stylesheet" href="/sekolah/dist/css/style.css?v=1762596331" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container header-container">
+        <div class="logo">
+          <img
+            src="/sekolah/assets/images/sma.svg"
+            alt="Logo SMA Pertiwi Medan"
+          />
+        </div>
+
+        <!-- NAV MENU -->
+        <nav>
+          <ul class="menu">
+            <li><a href="/sekolah/index.html">Beranda</a></li>
+
+            <li class="dropdown">
+              <a href="#">Profil <i class="fa-solid fa-caret-down"></i></a>
+              <ul class="submenu">
+                <li><a href="/sekolah/profil.html">Profil Sekolah</a></li>
+                <li><a href="/sekolah/visimisi.html">Visi & Misi</a></li>
+                <li>
+                  <a href="/sekolah/tenagapendidik.html">Tenaga Pendidik</a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#">Informasi <i class="fa-solid fa-caret-down"></i></a>
+              <ul class="submenu">
+                <li><a href="/sekolah/artikel.html">Artikel</a></li>
+                <li><a href="/sekolah/kalender.html">Kalender</a></li>
+              </ul>
+            </li>
+
+            <li><a href="/sekolah/kontak.html">Kontak</a></li>
+
+            <li>
+              <a href="/sekolah/spmb.html" class="btn-daftar">
+                <i class="fa-solid fa-graduation-cap"></i> SPMB
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ===========================
+     HERO
+=========================== -->
+    <section class="dokumentasi-hero">
+      <div class="overlay"></div>
+      <div class="hero-content">
+        <h1>Galeri Kegiatan <span>2025</span></h1>
+        <p>Kumpulan kegiatan SMA Pertiwi sepanjang tahun.</p>
+      </div>
+    </section>
+
+    <!-- ===========================
+     FILTER
+=========================== -->
+    <section class="filter-section container">
+      <form method="GET" class="filter-form">
+        <select name="tahun">
+          <option value="2024">2024</option>
+          <option value="2025" selected>2025</option>
+          <option value="2026">2026</option>
+        </select>
+
+        <select name="bulan">
+          <option value="">Semua Bulan</option>
+          <option value="Januari">Januari</option>
+          <option value="Februari">Februari</option>
+          <option value="Maret">Maret</option>
+          <option value="April">April</option>
+          <option value="Mei">Mei</option>
+          <option value="Juni">Juni</option>
+        </select>
+
+        <button type="submit">Tampilkan</button>
+      </form>
+    </section>
+
+    <!-- ===========================
+     DOKUMENTASI
+=========================== -->
+    <section class="dokumentasi-section">
+      <div class="container">
+        <div class="dokumentasi-bulan">
+          <h2>Januari 2025</h2>
+          <div class="dokumentasi-grid">
+            <div class="dokumentasi-card">
+              <img
+                src="assets/images/upacara.jpeg"
+                alt="Upacara Awal Semester"
+                class="lightbox-trigger"
+              />
+              <div class="dokumentasi-content">
+                <span class="tanggal">5 Januari 2025</span>
+                <h3>Upacara Awal Semester</h3>
+                <p>Pembukaan semester genap dengan upacara bendera.</p>
+              </div>
+            </div>
+            <div class="dokumentasi-card">
+              <img
+                src="assets/images/kebersihan.jpg"
+                alt="Lomba Kebersihan Kelas"
+                class="lightbox-trigger"
+              />
+              <div class="dokumentasi-content">
+                <span class="tanggal">20 Januari 2025</span>
+                <h3>Lomba Kebersihan Kelas</h3>
+                <p>Kegiatan tahunan untuk meningkatkan kepedulian siswa.</p>
+              </div>
+            </div>
+            <div class="dokumentasi-card">
+              <img
+                src="assets/images/rapat.jpeg"
+                alt="Rapat Guru"
+                class="lightbox-trigger"
+              />
+              <div class="dokumentasi-content">
+                <span class="tanggal">22 Januari 2025</span>
+                <h3>Rapat Guru</h3>
+                <p>Koordinasi guru dalam mempersiapkan ujian semester.</p>
+              </div>
+            </div>
+
+            <div class="lihat-semua" onclick="toggleFoto(this)">
+              <span>Lihat Semua Foto (4)</span>
+            </div>
+            <div class="foto-tersembunyi" style="display: none">
+              <div class="dokumentasi-card">
+                <img
+                  src="assets/images/download.jpeg"
+                  alt="Penyuluhan Narkoba"
+                  class="lightbox-trigger"
+                />
+                <div class="dokumentasi-content">
+                  <span class="tanggal">25 Januari 2025</span>
+                  <h3>Penyuluhan Narkoba</h3>
+                  <p>
+                    Penyuluhan tentang bahaya narkoba bagi siswa SMA Pertiwi.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dokumentasi-bulan">
+          <h2>Februari 2025</h2>
+          <div class="dokumentasi-grid">
+            <div class="dokumentasi-card">
+              <img
+                src="assets/images/pentas.jpg"
+                alt="Pentas Seni"
+                class="lightbox-trigger"
+              />
+              <div class="dokumentasi-content">
+                <span class="tanggal">14 Februari 2025</span>
+                <h3>Pentas Seni</h3>
+                <p>Ajang kreativitas siswa SMA Pertiwi.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dokumentasi-bulan">
+          <h2>Maret 2025</h2>
+          <div class="dokumentasi-grid">
+            <div class="dokumentasi-card">
+              <img
+                src="assets/images/tryout.jpeg"
+                alt="Try Out Ujian Nasional"
+                class="lightbox-trigger"
+              />
+              <div class="dokumentasi-content">
+                <span class="tanggal">2 Maret 2025</span>
+                <h3>Try Out Ujian Nasional</h3>
+                <p>Persiapan siswa kelas XII menghadapi ujian nasional.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PAGINATION -->
+        <div class="pagination">
+          <a href="?page=1&tahun=2025&bulan=" class="active"> 1 </a>
+          <a href="?page=2&tahun=2025&bulan=" class=""> 2 </a>
+
+          <a href="?page=2&tahun=2025&bulan=">Berikutnya &raquo;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===========================
+     LIGHTBOX
+=========================== -->
+    <div id="lightbox">
+      <img id="lightbox-img" src="" alt="Preview Gambar" />
+    </div>
+
+    <script>
+      function toggleFoto(button) {
+        const hiddenPhotos = button.nextElementSibling;
+        const span = button.querySelector("span");
+        if (hiddenPhotos.style.display === "none") {
+          hiddenPhotos.style.display = "grid";
+          span.innerText = "Sembunyikan Foto";
+        } else {
+          hiddenPhotos.style.display = "none";
+          const total =
+            hiddenPhotos.querySelectorAll(".dokumentasi-card").length + 3;
+          span.innerText = "Lihat Semua Foto (" + total + ")";
+        }
+      }
+
+      document.querySelectorAll(".lightbox-trigger").forEach((img) => {
+        img.addEventListener("click", () => {
+          const lightbox = document.getElementById("lightbox");
+          const lightboxImg = document.getElementById("lightbox-img");
+          lightboxImg.src = img.src;
+          lightbox.style.display = "flex";
+        });
+      });
+      document.getElementById("lightbox").addEventListener("click", (e) => {
+        if (e.target.id === "lightbox") e.target.style.display = "none";
+      });
+    </script>
+
+    <!-- footer.html -->
+    <footer>
+      <div class="container">
+        <div class="footer-box">
+          <div class="box">
+            <h2>Sosial Media</h2>
+            <p>
+              SMA Pertiwi Medan hadir di berbagai media sosial sebagai sarana
+              komunikasi dan informasi.
+            </p>
+            <div class="sosial">
+              <a href="#"
+                ><img src="assets/images/facebook.png" alt="facebook"
+              /></a>
+              <a href="#"
+                ><img src="assets/images/instagram.png" alt="instagram"
+              /></a>
+              <a href="#"
+                ><img src="assets/images/youtube.png" alt="youtube"
+              /></a>
+            </div>
+          </div>
+          <div class="box">
+            <h2>Kontak</h2>
+            <p>
+              <img src="assets/images/gmail.png" alt="gmail" />
+              smaspertiwimedan@gmail.com
+            </p>
+            <p>
+              <img src="assets/images/whatsapp.png" alt="whatsapp" />
+              0813-6229-1258
+            </p>
+            <p>
+              <img src="assets/images/map.png" alt="map" /> Jalan Budi Persatuan
+              No.1, Medan Barat
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="dist/js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
