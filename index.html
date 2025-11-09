@@ -8,7 +8,7 @@
     <!-- Favicon -->
     <link rel="icon" href="assets/icon/pertiwi.png" type="image/png" />
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts (Pastikan font tampil rapi seperti sebelumnya) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,7 +22,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
 
-    <!-- Main CSS -->
+    <!-- Main CSS (path fix, sesuai struktur kamu di C:\xampp\htdocs\sekolah\dist\css\style.css) -->
     <link rel="stylesheet" href="dist/css/style.css" />
   </head>
 
@@ -38,14 +38,18 @@
         <nav>
           <ul class="menu">
             <li><a href="index.html">Beranda</a></li>
+
             <li class="dropdown">
               <a href="#">Profil <i class="fa-solid fa-caret-down"></i></a>
               <ul class="submenu">
                 <li><a href="profil.html">Profil Sekolah</a></li>
                 <li><a href="visimisi.html">Visi & Misi</a></li>
-                <li><a href="tenagapendidik.html">Tenaga Pendidik</a></li>
+                <li>
+                  <a href="tenagapendidik.html">Tenaga Pendidik</a>
+                </li>
               </ul>
             </li>
+
             <li class="dropdown">
               <a href="#">Informasi <i class="fa-solid fa-caret-down"></i></a>
               <ul class="submenu">
@@ -53,7 +57,9 @@
                 <li><a href="kalender.html">Kalender</a></li>
               </ul>
             </li>
+
             <li><a href="kontak.html">Kontak</a></li>
+
             <li>
               <a href="spmb.html" class="btn-daftar">
                 <i class="fa-solid fa-graduation-cap"></i> SPMB
@@ -64,7 +70,6 @@
       </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero">
       <div class="hero-overlay"></div>
       <div class="container hero-content">
@@ -82,13 +87,14 @@
       </div>
     </section>
 
-    <!-- Quick Links -->
+    <!-- Ikon Cepat -->
     <section class="quick-links">
       <div class="container quick-grid">
         <a href="sambutan.html" class="card">
           <img src="assets/icon/sambutan.svg" alt="" />
           <p>Sambutan</p>
         </a>
+
         <a href="visimisi.html" class="card">
           <img src="assets/icon/visi.svg" alt="" />
           <p>Visi & Misi</p>
@@ -97,6 +103,7 @@
           <img src="assets/icon/hasil.svg" alt="" />
           <p>Hasil SPMB</p>
         </a>
+
         <a href="ekskul.html" class="card">
           <img src="assets/icon/eskul.svg" alt="" />
           <p>Ekskul</p>
@@ -105,6 +112,7 @@
           <img src="assets/icon/fasilitas.svg" alt="" />
           <p>Fasilitas</p>
         </a>
+
         <a href="galeri.html" class="card">
           <img src="assets/icon/galeri.svg" alt="" />
           <p>Galeri</p>
@@ -137,9 +145,112 @@
       </div>
     </section>
 
-    <!-- Footer -->
+    <!-- (Bagian berita dan SPMB tetap sama seperti sebelumnya) -->
+
+    <!-- berita.html -->
+    <section class="news-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Berita Terbaru</h2>
+          <p>Informasi penting, pengumuman, dan artikel dari sekolah.</p>
+        </div>
+
+        <div class="filter-buttons">
+          <button class="active" onclick="filterNews('semua')">Semua</button>
+          <button onclick="filterNews('pengumuman')">Pengumuman</button>
+          <button onclick="filterNews('berita')">Berita</button>
+          <button onclick="filterNews('artikel')">Artikel</button>
+        </div>
+
+        <div class="news-grid">
+          <div class="news-card" data-type="pengumuman">
+            <div class="news-image">
+              <img
+                src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=60"
+                alt="Jadwal Ujian Tengah Semester Kelas X"
+              />
+              <span class="badge pengumuman">Pengumuman</span>
+            </div>
+            <div class="news-content">
+              <h3>Jadwal Ujian Tengah Semester Kelas X</h3>
+              <p>
+                Pengumuman penting: Ujian Tengah Semester untuk kelas X akan
+                dilaksanakan pada 20-24 Mei. Mohon siswa mempersiapkan diri...
+              </p>
+              <div class="news-footer">
+                <small>10 May 2025</small>
+                <a href="#" class="read-more">Baca Selengkapnya</a>
+              </div>
+            </div>
+          </div>
+          <div class="news-card" data-type="berita">
+            <div class="news-image">
+              <img
+                src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=60"
+                alt="Siswa SMA Meraih Juara Olimpiade Komputer Tingkat Provinsi"
+              />
+              <span class="badge berita">Berita</span>
+            </div>
+            <div class="news-content">
+              <h3>
+                Siswa SMA Meraih Juara Olimpiade Komputer Tingkat Provinsi
+              </h3>
+              <p>
+                Tim sekolah berhasil meraih medali emas pada Olimpiade Komputer
+                Provinsi. Prestasi ini menjadi bukti kualitas pembinaan ...
+              </p>
+              <div class="news-footer">
+                <small>28 Apr 2025</small>
+                <a href="#" class="read-more">Baca Selengkapnya</a>
+              </div>
+            </div>
+          </div>
+          <div class="news-card" data-type="artikel">
+            <div class="news-image">
+              <img
+                src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&q=60"
+                alt="Tips Belajar Efektif untuk Menghadapi Ujian Nasional"
+              />
+              <span class="badge artikel">Artikel</span>
+            </div>
+            <div class="news-content">
+              <h3>Tips Belajar Efektif untuk Menghadapi Ujian Nasional</h3>
+              <p>
+                Belajar efektif membutuhkan strategi yang tepat: membuat jadwal
+                belajar, istirahat yang cukup, teknik membaca cepat, dan...
+              </p>
+              <div class="news-footer">
+                <small>12 Mar 2025</small>
+                <a href="#" class="read-more">Baca Selengkapnya</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="view-all">
+          <a href="artikel.html">Lihat Semua Berita</a>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function filterNews(type) {
+        const cards = document.querySelectorAll(".news-card");
+        const buttons = document.querySelectorAll(".filter-buttons button");
+
+        buttons.forEach((btn) => btn.classList.remove("active"));
+        event.target.classList.add("active");
+
+        cards.forEach((card) => {
+          card.style.display =
+            type === "semua" || card.dataset.type === type ? "block" : "none";
+        });
+      }
+    </script>
+
     <footer class="site-footer">
       <div class="footer-inner">
+        <!-- Logo Sekolah -->
         <div class="footer-col logo">
           <img
             src="assets/images/sma.png"
@@ -147,6 +258,7 @@
             class="school-logo"
           />
         </div>
+
         <div class="footer-col contact">
           <h3>Hubungi Kami</h3>
           <p>
@@ -162,44 +274,53 @@
             No.1, Medan Barat
           </p>
         </div>
+
         <div class="footer-col follow">
           <h3>Ikuti Kami</h3>
           <div class="footer-social">
             <a
               href="https://web.facebook.com/SMAPertiwiMedan.co.sch"
               target="_blank"
-              ><img src="assets/images/facebook.png" alt="facebook"
-            /></a>
-            <a href="https://www.instagram.com/smapertiwimedan" target="_blank"
-              ><img src="assets/images/instagram.png" alt="instagram"
-            /></a>
+            >
+              <img src="assets/images/facebook.png" alt="facebook" />
+            </a>
+            <a href="https://www.instagram.com/smapertiwimedan" target="_blank">
+              <img src="assets/images/instagram.png" alt="instagram" />
+            </a>
             <a
               href="https://www.youtube.com/@smapertiwimedan8116"
               target="_blank"
-              ><img src="assets/images/youtube.png" alt="youtube"
-            /></a>
+            >
+              <img src="assets/images/youtube.png" alt="youtube" />
+            </a>
           </div>
           <p class="motto">"Belajar. Berkarya. Berprestasi."</p>
         </div>
       </div>
+
       <div class="footer-bottom">
         <p>© 2025 SMA Pertiwi Medan.</p>
       </div>
     </footer>
 
-    <!-- Scripts -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggle = document.getElementById("menuToggle");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        if (toggle && mobileMenu) {
+          toggle.addEventListener("click", function () {
+            mobileMenu.classList.toggle("active");
+          });
+        }
+      });
+    </script>
+
+    <!-- JS -->
     <script src="dist/js/script.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
-      document.addEventListener("DOMContentLoaded", function () {
-        const toggle = document.getElementById("menuToggle");
-        const mobileMenu = document.getElementById("mobileMenu");
-        if (toggle && mobileMenu)
-          toggle.addEventListener("click", () =>
-            mobileMenu.classList.toggle("active")
-          );
-      });
     </script>
   </body>
 </html>

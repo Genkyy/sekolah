@@ -6,9 +6,9 @@
     <title>SMA PERTIWI MEDAN</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="/sekolah/assets/icon/pertiwi.png" type="image/png" />
+    <link rel="icon" href="assets/icon/pertiwi.png" type="image/png" />
 
-    <!-- Google Fonts (Pastikan font tampil rapi seperti sebelumnya) -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,49 +22,37 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
 
-    <!-- Main CSS (path fix, sesuai struktur kamu di C:\xampp\htdocs\sekolah\dist\css\style.css) -->
-    <link rel="stylesheet" href="/sekolah/dist/css/style.css?v=1762594473" />
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="dist/css/style.css?v=1762594473" />
   </head>
-
   <body>
     <!-- Header -->
     <header>
       <div class="container header-container">
         <div class="logo">
-          <img
-            src="/sekolah/assets/images/sma.svg"
-            alt="Logo SMA Pertiwi Medan"
-          />
+          <img src="assets/images/sma.svg" alt="Logo SMA Pertiwi Medan" />
         </div>
-
-        <!-- NAV MENU -->
         <nav>
           <ul class="menu">
-            <li><a href="/sekolah/index.html">Beranda</a></li>
-
+            <li><a href="index.html">Beranda</a></li>
             <li class="dropdown">
               <a href="#">Profil <i class="fa-solid fa-caret-down"></i></a>
               <ul class="submenu">
-                <li><a href="/sekolah/profil.html">Profil Sekolah</a></li>
-                <li><a href="/sekolah/visimisi.html">Visi & Misi</a></li>
-                <li>
-                  <a href="/sekolah/tenagapendidik.html">Tenaga Pendidik</a>
-                </li>
+                <li><a href="profil.html">Profil Sekolah</a></li>
+                <li><a href="visimisi.html">Visi & Misi</a></li>
+                <li><a href="tenagapendidik.html">Tenaga Pendidik</a></li>
               </ul>
             </li>
-
             <li class="dropdown">
               <a href="#">Informasi <i class="fa-solid fa-caret-down"></i></a>
               <ul class="submenu">
-                <li><a href="/sekolah/artikel.html">Artikel</a></li>
-                <li><a href="/sekolah/kalender.html">Kalender</a></li>
+                <li><a href="artikel.html">Artikel</a></li>
+                <li><a href="kalender.html">Kalender</a></li>
               </ul>
             </li>
-
-            <li><a href="/sekolah/kontak.html">Kontak</a></li>
-
+            <li><a href="kontak.html">Kontak</a></li>
             <li>
-              <a href="/sekolah/spmb.html" class="btn-daftar">
+              <a href="spmb.html" class="btn-daftar">
                 <i class="fa-solid fa-graduation-cap"></i> SPMB
               </a>
             </li>
@@ -73,6 +61,7 @@
       </div>
     </header>
 
+    <!-- Guru Hero -->
     <section class="guru-hero">
       <div class="overlay"></div>
       <div class="hero-content">
@@ -85,7 +74,7 @@
     </section>
 
     <!-- Kepala Sekolah -->
-    <section class="kepala-sekolah">
+    <section class="kepala-sekolah hidden-on-page">
       <div class="container">
         <h2 data-aos="fade-up">Kepala <span>Sekolah</span></h2>
         <div class="kepala-card" data-aos="fade-up" data-aos-delay="200">
@@ -97,12 +86,12 @@
     </section>
 
     <!-- Wakil Kepala -->
-    <section class="wakil-section">
+    <section class="wakil-section hidden-on-page">
       <div class="container">
         <h2 data-aos="fade-up">Wakil Kepala <span>Sekolah</span></h2>
         <div class="wakil-grid">
           <div class="wakil-card" data-aos="zoom-in" data-aos-delay="100">
-            <img src="assets/images/bulia.jpg" alt="" />
+            <img src="assets/images/bulia.png" alt="" />
             <h3>Normalia Amanda, MPd</h3>
             <p>Bidang Kurikulum</p>
           </div>
@@ -121,7 +110,7 @@
     </section>
 
     <!-- Bendahara & TU -->
-    <section class="bendahara-tatausaha-section">
+    <section class="bendahara-tatausaha-section hidden-on-page">
       <div class="container">
         <h2 data-aos="fade-up"><span>Bendahara</span> & Tata Usaha</h2>
         <div class="bendahara-tatausaha-grid">
@@ -143,7 +132,7 @@
       </div>
     </section>
 
-    <!-- Guru -->
+    <!-- Guru Section (All in one page) -->
     <section class="guru-section">
       <div class="container">
         <div class="guru-header" data-aos="fade-up">
@@ -151,13 +140,14 @@
           <p>Guru-guru membimbing peserta didik SMA Pertiwi Medan.</p>
         </div>
 
-        <div class="guru-grid">
-          <div class="guru-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="guru-grid" id="guruGrid">
+          <!-- Semua guru dimasukkan di sini -->
+          <div class="guru-card">
             <img src="assets/images/pakasmanto.jpg" alt="Asmanto Purba, M.Pd" />
             <h3>Asmanto Purba, M.Pd</h3>
             <p>Matematika</p>
           </div>
-          <div class="guru-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="guru-card">
             <img
               src="assets/images/pakazhar.jpg"
               alt="Azhar Safari Siregar, SE"
@@ -165,7 +155,7 @@
             <h3>Azhar Safari Siregar, SE</h3>
             <p>Agama</p>
           </div>
-          <div class="guru-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="guru-card">
             <img
               src="assets/images/budedek.jpg"
               alt="Dedek Elen Enjelina, SPd"
@@ -173,7 +163,7 @@
             <h3>Dedek Elen Enjelina, SPd</h3>
             <p>Bahasa Indonesia & KTI</p>
           </div>
-          <div class="guru-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="guru-card">
             <img
               src="assets/images/pakbayu.jpg"
               alt="Dicky Bayu Saputra, MPd"
@@ -181,7 +171,7 @@
             <h3>Dicky Bayu Saputra, MPd</h3>
             <p>Biologi</p>
           </div>
-          <div class="guru-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="guru-card">
             <img
               src="assets/images/budwi.jpg"
               alt="Dwi Anggreani Hanifah, SPd"
@@ -189,7 +179,7 @@
             <h3>Dwi Anggreani Hanifah, SPd</h3>
             <p>Fisika</p>
           </div>
-          <div class="guru-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="guru-card">
             <img
               src="assets/images/bufina.jpg"
               alt="Fina Afrilia Surbakti, SPd"
@@ -197,7 +187,7 @@
             <h3>Fina Afrilia Surbakti, SPd</h3>
             <p>PPKN</p>
           </div>
-          <div class="guru-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="guru-card">
             <img
               src="assets/images/buindriana.jpg"
               alt="Indraina Anggita, MPd"
@@ -205,7 +195,7 @@
             <h3>Indraina Anggita, MPd</h3>
             <p>Seni Rupa & Theater</p>
           </div>
-          <div class="guru-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="guru-card">
             <img
               src="assets/images/pakizra.jpg"
               alt="Izra Isbullah Nasution, SPd"
@@ -213,73 +203,202 @@
             <h3>Izra Isbullah Nasution, SPd</h3>
             <p>Sejarah</p>
           </div>
+          <div class="guru-card">
+            <img
+              src="assets/images/bunetti.jpg"
+              alt="Netti Purnama Sari Siregar, MPd"
+            />
+            <h3>Netti Purnama Sari Siregar, MPd</h3>
+            <p>Bahasa Indonesia</p>
+          </div>
+          <div class="guru-card">
+            <img
+              src="assets/images/paknikki.jpg"
+              alt="Nikky Aldrian Nasution, SPd"
+            />
+            <h3>Nikky Aldrian Nasution, SPd</h3>
+            <p>Bimbingan Konseling</p>
+          </div>
+          <div class="guru-card">
+            <img src="assets/images/bulia.png" alt="Normalia Amanda, MPd" />
+            <h3>Normalia Amanda, MPd</h3>
+            <p>Kimia</p>
+          </div>
+          <div class="guru-card">
+            <img src="assets/images/bunova.jpg" alt="Nova Ricka, SPd" />
+            <h3>Nova Ricka, SPd</h3>
+            <p>Ekonomi</p>
+          </div>
+          <div class="guru-card">
+            <img src="assets/images/pakokta.png" alt="Okta Marestu, SPd" />
+            <h3>Okta Marestu, SPd</h3>
+            <p>Olahraga</p>
+          </div>
+          <div class="guru-card">
+            <img src="assets/images/buseri.jpg" alt="Seri Masria, SPd" />
+            <h3>Seri Masria, SPd</h3>
+            <p>Geografi</p>
+          </div>
+          <div class="guru-card">
+            <img
+              src="assets/images/busilvi.jpg"
+              alt="Silvi Anggraini Rahman, SPd, MSi"
+            />
+            <h3>Silvi Anggraini Rahman, SPd, MSi</h3>
+            <p>Matematika</p>
+          </div>
+          <div class="guru-card">
+            <img src="assets/images/buvanisha.jpg" alt="Vanisha Adila, SPd" />
+            <h3>Vanisha Adila, SPd</h3>
+            <p>Sosiologi</p>
+          </div>
+          <div class="guru-card">
+            <img src="assets/images/buwinna.jpg" alt="Sity Winna Wati, SPd" />
+            <h3>Sity Winna Wati, SPd</h3>
+            <p>Prakarya</p>
+          </div>
+          <div class="guru-card">
+            <img
+              src="assets/images/pakdarma.jpg"
+              alt="Widharmawanta Ginting, MPd"
+            />
+            <h3>Widharmawanta Ginting, MPd</h3>
+            <p>Bahasa Inggis</p>
+          </div>
+          <div class="guru-card">
+            <img
+              src="assets/images/pakkhoir.png"
+              alt="Khoirul Tarmidzi, S.Kom"
+            />
+            <h3>Khoirul Tarmidzi, S.Kom</h3>
+            <p>Informatika</p>
+          </div>
         </div>
 
-        <div class="pagination">
-          <a href="?page=1" class="active">1</a>
-          <a href="?page=2" class="">2</a>
-          <a href="?page=3" class="">3</a>
-
-          <a href="?page=2" class="next">→</a>
-        </div>
+        <!-- Pagination Dynamic -->
+        <div class="pagination" id="guruPagination"></div>
       </div>
     </section>
 
-    <!-- footer.html -->
+    <!-- Footer -->
     <footer class="site-footer">
       <div class="footer-inner">
-        <!-- Logo Sekolah -->
         <div class="footer-col logo">
           <img
-            src="/sekolah/assets/images/sma.png"
+            src="assets/images/sma.png"
             alt="Logo SMA Pertiwi Medan"
             class="school-logo"
           />
         </div>
-
         <div class="footer-col contact">
           <h3>Hubungi Kami</h3>
           <p>
-            <img src="/sekolah/assets/images/gmail.png" alt="email" />
+            <img src="assets/images/gmail.png" alt="email" />
             smaspertiwimedan@gmail.com
           </p>
           <p>
-            <img src="/sekolah/assets/images/whatsapp.png" alt="whatsapp" />
+            <img src="assets/images/whatsapp.png" alt="whatsapp" />
             0813-6229-1258
           </p>
           <p>
-            <img src="/sekolah/assets/images/map.png" alt="lokasi" />
-            Jl. Budi Persatuan No.1, Medan Barat
+            <img src="assets/images/map.png" alt="lokasi" /> Jl. Budi Persatuan
+            No.1, Medan Barat
           </p>
         </div>
-
         <div class="footer-col follow">
           <h3>Ikuti Kami</h3>
           <div class="footer-social">
             <a
               href="https://web.facebook.com/SMAPertiwiMedan.co.sch"
               target="_blank"
-            >
-              <img src="/sekolah/assets/images/facebook.png" alt="facebook" />
-            </a>
-            <a href="https://www.instagram.com/smapertiwimedan" target="_blank">
-              <img src="/sekolah/assets/images/instagram.png" alt="instagram" />
-            </a>
+              ><img src="assets/images/facebook.png" alt="facebook"
+            /></a>
+            <a href="https://www.instagram.com/smapertiwimedan" target="_blank"
+              ><img src="assets/images/instagram.png" alt="instagram"
+            /></a>
             <a
               href="https://www.youtube.com/@smapertiwimedan8116"
               target="_blank"
-            >
-              <img src="/sekolah/assets/images/youtube.png" alt="youtube" />
-            </a>
+              ><img src="assets/images/youtube.png" alt="youtube"
+            /></a>
           </div>
           <p class="motto">"Belajar. Berkarya. Berprestasi."</p>
         </div>
       </div>
-
       <div class="footer-bottom">
         <p>© 2025 SMA Pertiwi Medan.</p>
       </div>
     </footer>
+
+    <!-- Pagination Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const guruGrid = document.getElementById("guruGrid");
+        const pagination = document.getElementById("guruPagination");
+        const guruCards = Array.from(guruGrid.children);
+        const perPage = 8;
+        let currentPage = 1;
+
+        function showPage(page) {
+          currentPage = page;
+          const start = (page - 1) * perPage;
+          const end = page * perPage;
+
+          // Tampilkan guru sesuai halaman
+          guruCards.forEach((card, index) => {
+            card.style.display =
+              index >= start && index < end ? "block" : "none";
+          });
+
+          // Tampilkan / sembunyikan Kepala, Wakil, Bendahara & TU
+          const hiddenSections = document.querySelectorAll(".hidden-on-page");
+          hiddenSections.forEach((sec) => {
+            sec.style.display = page === 1 ? "block" : "none";
+          });
+
+          renderPagination();
+        }
+
+        function renderPagination() {
+          const totalPages = Math.ceil(guruCards.length / perPage);
+          pagination.innerHTML = "";
+
+          const prev = document.createElement("a");
+          prev.textContent = "←";
+          prev.href = "#";
+          prev.className = currentPage === 1 ? "disabled" : "";
+          prev.addEventListener("click", (e) => {
+            e.preventDefault();
+            if (currentPage > 1) showPage(currentPage - 1);
+          });
+          pagination.appendChild(prev);
+
+          for (let i = 1; i <= totalPages; i++) {
+            const pageLink = document.createElement("a");
+            pageLink.textContent = i;
+            pageLink.href = "#";
+            pageLink.className = currentPage === i ? "active" : "";
+            pageLink.addEventListener("click", (e) => {
+              e.preventDefault();
+              showPage(i);
+            });
+            pagination.appendChild(pageLink);
+          }
+
+          const next = document.createElement("a");
+          next.textContent = "→";
+          next.href = "#";
+          next.className = currentPage === totalPages ? "disabled" : "";
+          next.addEventListener("click", (e) => {
+            e.preventDefault();
+            if (currentPage < totalPages) showPage(currentPage + 1);
+          });
+          pagination.appendChild(next);
+        }
+
+        showPage(1); // tampilkan halaman pertama
+      });
+    </script>
 
     <!-- JS -->
     <script src="dist/js/script.js"></script>
