@@ -155,9 +155,10 @@ header {
 
   /* ===== NAVBAR MOBILE ===== */
   .navbar-mobile {
+    position: relative;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     width: 100%;
     background: linear-gradient(135deg, #0b6f33, #084f24);
     padding: 10px 16px;
@@ -165,20 +166,30 @@ header {
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
   }
 
+  /* tombol menu kiri */
   .menu-toggle {
     background: none;
     border: none;
     color: white;
     font-size: 1.6rem;
     cursor: pointer;
+    z-index: 2;
+  }
+
+  /* logo di tengah (secara absolut) */
+  .nav-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .nav-center img.nav-logo {
-    height: 80px; /* sebelumnya 60px */
+    height: 110px;
     width: auto;
-    max-height: 80px; /* pastikan tidak keluar header */
+    display: block;
   }
 
+  /* tombol kanan (SPMB) */
   .btn-spmb {
     background: linear-gradient(135deg, #f4d03f, #d4ac0d);
     color: white;
@@ -188,6 +199,7 @@ header {
     font-weight: 600;
     font-size: 14px;
     transition: 0.3s;
+    z-index: 2;
   }
 
   .btn-spmb:hover {
@@ -209,7 +221,7 @@ header {
     text-align: center;
     padding: 12px 0;
     z-index: 999;
-    max-height: 55vh; /* tidak menutupi layar penuh */
+    max-height: 70vh;
     overflow-y: auto;
     transition: all 0.3s ease-in-out;
   }
@@ -225,7 +237,7 @@ header {
   }
 
   .mobile-menu li {
-    margin: 6px 0;
+    margin: 10px 0;
   }
 
   .mobile-menu a {
@@ -325,10 +337,10 @@ header {
 }
 
 .hero-image img {
-  width: 565px;
+  width: 560px;
   max-width: 155%;
   opacity: 0;
-  transform: translateX(100px);
+  transform: translateX(50px);
   animation: slideInRight 1.2s ease-out forwards;
   animation-delay: 0.3s;
 }
@@ -353,7 +365,7 @@ header {
   }
 
   .hero-text {
-    margin-top: 50px; /* ✅ turunin teks */
+    margin-top: 100px; /* ✅ turunin teks */
   }
 
   .hero-text h2 {
@@ -375,7 +387,7 @@ header {
     transform: translateX(100px);
     animation: slideInRight 1.2s ease-out forwards;
     animation-delay: 0.3s;
-    margin-top: -50px; /* ✅ naikkan foto sedikit */
+    margin-top: -30px; /* ✅ naikkan foto sedikit */
   }
 }
 
@@ -395,6 +407,7 @@ header {
 }
 
 /* ====================== 4. QUICK LINKS ====================== */
+/* ===== QUICK LINKS ===== */
 .quick-links {
   position: relative;
   padding: 0 0 80px;
@@ -411,70 +424,70 @@ header {
   margin: 0 auto;
   padding: 30px 40px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 26px;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 28px;
   justify-items: center;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
+/* Kartu Icon */
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: all 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   opacity: 0;
   transform: translateY(40px);
   animation: fadeUp 0.8s ease-out forwards;
 }
 
 .card img {
-  width: 58px;
-  height: 58px;
-  margin-bottom: 10px;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 12px;
 }
 
 .card p {
   font-size: 15px;
-  font-weight: 520;
-  color: #3a3d50;
+  font-weight: 600;
+  color: #2d3a2d;
+  margin: 0;
+}
+.card:hover p {
+  color: #0b6f33; /* sedikit berubah warna saat disentuh */
 }
 
+/* Hover effect ringan */
 .card:hover {
   transform: translateY(-6px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  text-decoration: none;
 }
 
-/* Animasi berurutan untuk setiap ikon */
+/* Animasi delay berurutan */
 .quick-grid .card:nth-child(1) {
-  animation-delay: 0.4s;
+  animation-delay: 0.2s;
 }
 .quick-grid .card:nth-child(2) {
-  animation-delay: 0.6s;
+  animation-delay: 0.4s;
 }
 .quick-grid .card:nth-child(3) {
-  animation-delay: 0.8s;
+  animation-delay: 0.6s;
 }
 .quick-grid .card:nth-child(4) {
-  animation-delay: 1s;
+  animation-delay: 0.8s;
 }
 .quick-grid .card:nth-child(5) {
-  animation-delay: 1.2s;
+  animation-delay: 1s;
 }
 .quick-grid .card:nth-child(6) {
-  animation-delay: 1.4s;
+  animation-delay: 1.2s;
 }
 
-/* ======= Keyframes ======= */
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
+/* ===== Keyframes ===== */
 @keyframes fadeUp {
   from {
     opacity: 0;
@@ -483,6 +496,43 @@ header {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .quick-grid {
+    top: -60px;
+    padding: 24px;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .card p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .quick-grid {
+    top: -50px;
+    padding: 20px 18px;
+    gap: 18px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .card p {
+    font-size: 13px;
   }
 }
 
@@ -816,7 +866,7 @@ footer {
 /* ====================== KATA SAMBUTAN ====================== */
 .hero-sambutan {
   position: relative;
-  background: url("/assets/images/lapangan.jpg") 50% 70% / cover no-repeat;
+  background: url("../../assets/images/sampul.jpg") 50% 60% / cover no-repeat;
   height: 400px;
   display: flex;
   align-items: center;
@@ -933,7 +983,7 @@ footer {
   }
 
   .sambutan-text {
-    padding: 0 20px;
+    padding: 0 1px;
   }
 
   .sambutan-signature {
@@ -951,7 +1001,7 @@ footer {
   }
 
   .sambutan-text h2 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 
   .sambutan-text p {

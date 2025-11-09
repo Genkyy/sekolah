@@ -23,7 +23,7 @@
     />
 
     <!-- Main CSS (path fix, sesuai struktur kamu di C:\xampp\htdocs\sekolah\dist\css\style.css) -->
-    <link rel="stylesheet" href="dist/css/style.css" />
+    <link rel="stylesheet" href="dist/css/style.css?v=1762596252" />
   </head>
 
   <body>
@@ -31,7 +31,11 @@
     <header>
       <div class="container header-container">
         <div class="logo">
-          <img src="assets/images/sma.svg" alt="Logo SMA Pertiwi Medan" />
+          <img
+            src="assets/images/logopanjang.png"
+            alt="Logo SMA Pertiwi Medan"
+            class="school-logo"
+          />
         </div>
 
         <!-- NAV MENU -->
@@ -44,9 +48,7 @@
               <ul class="submenu">
                 <li><a href="profil.html">Profil Sekolah</a></li>
                 <li><a href="visimisi.html">Visi & Misi</a></li>
-                <li>
-                  <a href="tenagapendidik.html">Tenaga Pendidik</a>
-                </li>
+                <li><a href="tenagapendidik.html">Tenaga Pendidik</a></li>
               </ul>
             </li>
 
@@ -68,6 +70,36 @@
           </ul>
         </nav>
       </div>
+
+      <!-- ===== NAVBAR MOBILE ===== -->
+      <div class="navbar-mobile">
+        <button class="menu-toggle" id="menuToggle">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <a href="index.html" class="nav-center">
+          <img
+            src="assets/images/logopendek.png"
+            alt="Logo SMA Pertiwi Medan"
+            class="nav-logo"
+          />
+        </a>
+
+        <a href="spmb.html" class="btn-spmb">SPMB</a>
+      </div>
+
+      <!-- MENU DROPDOWN MOBILE -->
+      <nav class="mobile-menu" id="mobileMenu">
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="profil.html">Profil Sekolah</a></li>
+          <li><a href="visimisi.html">Visi & Misi</a></li>
+          <li><a href="tenagapendidik.html">Tenaga Pendidik</a></li>
+          <li><a href="artikel.html">Artikel</a></li>
+          <li><a href="kalender.html">Kalender</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+      </nav>
     </header>
 
     <section class="hero">
@@ -76,7 +108,7 @@
         <div class="hero-text">
           <p>SEKOLAH MENENGAH ATAS</p>
           <h2>SMA PERTIWI MEDAN</h2>
-          <p>
+          <p class="motivasi">
             “Kesuksesan bukan hanya tentang mimpi, tapi tentang keberanian untuk
             berjuang dan berdoa mewujudkannya.”
           </p>
@@ -91,35 +123,36 @@
     <section class="quick-links">
       <div class="container quick-grid">
         <a href="sambutan.html" class="card">
-          <img src="assets/icon/sambutan.svg" alt="" />
+          <img src="assets/icon/sambutan.svg" alt="Sambutan" />
           <p>Sambutan</p>
         </a>
 
         <a href="visimisi.html" class="card">
-          <img src="assets/icon/visi.svg" alt="" />
+          <img src="assets/icon/visi.svg" alt="Visi & Misi" />
           <p>Visi & Misi</p>
         </a>
+
         <a href="spmb.html" class="card">
-          <img src="assets/icon/hasil.svg" alt="" />
+          <img src="assets/icon/hasil.svg" alt="Hasil SPMB" />
           <p>Hasil SPMB</p>
         </a>
 
         <a href="ekskul.html" class="card">
-          <img src="assets/icon/eskul.svg" alt="" />
+          <img src="assets/icon/eskul.svg" alt="Ekskul" />
           <p>Ekskul</p>
         </a>
+
         <a href="fasilitas.html" class="card">
-          <img src="assets/icon/fasilitas.svg" alt="" />
+          <img src="assets/icon/fasilitas.svg" alt="Fasilitas" />
           <p>Fasilitas</p>
         </a>
 
         <a href="galeri.html" class="card">
-          <img src="assets/icon/galeri.svg" alt="" />
+          <img src="assets/icon/galeri.svg" alt="Galeri" />
           <p>Galeri</p>
         </a>
       </div>
     </section>
-
     <!-- Tentang Kami -->
     <section class="tentang">
       <div class="container tentang-wrapper">
@@ -253,7 +286,7 @@
         <!-- Logo Sekolah -->
         <div class="footer-col logo">
           <img
-            src="assets/images/sma.png"
+            src="assets/images/logopanjang.png"
             alt="Logo SMA Pertiwi Medan"
             class="school-logo"
           />
@@ -304,14 +337,21 @@
     </footer>
 
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const toggle = document.getElementById("menuToggle");
-        const mobileMenu = document.getElementById("mobileMenu");
+      // --- NAVBAR MOBILE TOGGLE ---
+      const menuToggle = document.getElementById("menuToggle");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const body = document.body;
 
-        if (toggle && mobileMenu) {
-          toggle.addEventListener("click", function () {
-            mobileMenu.classList.toggle("active");
-          });
+      menuToggle.addEventListener("click", function () {
+        mobileMenu.classList.toggle("active");
+        body.classList.toggle("no-scroll"); // supaya tidak bisa scroll saat menu terbuka
+      });
+
+      // Tutup menu jika klik di luar area menu
+      document.addEventListener("click", function (e) {
+        if (!mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+          mobileMenu.classList.remove("active");
+          body.classList.remove("no-scroll");
         }
       });
     </script>

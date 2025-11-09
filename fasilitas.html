@@ -32,7 +32,7 @@
       <div class="container header-container">
         <div class="logo">
           <img
-            src="assets/images/sma.png"
+            src="assets/images/logopanjang.png"
             alt="Logo SMA Pertiwi Medan"
             class="school-logo"
           />
@@ -79,7 +79,7 @@
 
         <a href="index.html" class="nav-center">
           <img
-            src="assets/images/sma.png"
+            src="assets/images/logopendek.png"
             alt="Logo SMA Pertiwi Medan"
             class="nav-logo"
           />
@@ -257,7 +257,7 @@
         <!-- Logo Sekolah -->
         <div class="footer-col logo">
           <img
-            src="assets/images/sma.png"
+            src="assets/images/logopanjang.png"
             alt="Logo SMA Pertiwi Medan"
             class="school-logo"
           />
@@ -306,6 +306,25 @@
         <p>© 2025 SMA Pertiwi Medan.</p>
       </div>
     </footer>
+    <script>
+      // --- NAVBAR MOBILE TOGGLE ---
+      const menuToggle = document.getElementById("menuToggle");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const body = document.body;
+
+      menuToggle.addEventListener("click", function () {
+        mobileMenu.classList.toggle("active");
+        body.classList.toggle("no-scroll"); // supaya tidak bisa scroll saat menu terbuka
+      });
+
+      // Tutup menu jika klik di luar area menu
+      document.addEventListener("click", function (e) {
+        if (!mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+          mobileMenu.classList.remove("active");
+          body.classList.remove("no-scroll");
+        }
+      });
+    </script>
 
     <!-- JS -->
     <script src="dist/js/script.js"></script>
