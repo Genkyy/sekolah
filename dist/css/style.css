@@ -264,13 +264,21 @@ header {
   background: url("../../assets/images/sampul.jpg") center/cover no-repeat;
   color: #fff;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Overlay hijau */
 .hero .hero-overlay {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(135deg, rgba(0, 128, 0, 0.7), rgba(0, 0, 0, 0.6));
+  z-index: 0;
+  pointer-events: none; /* biar tidak ganggu klik */
 }
 
 /* Overlay tambahan */
@@ -284,6 +292,7 @@ header {
     rgba(0, 0, 0, 0.08)
   );
   z-index: 0;
+  pointer-events: none;
 }
 
 /* Konten */
@@ -334,16 +343,21 @@ header {
 .hero-image {
   flex: 1 1 35%;
   text-align: right;
+  position: relative;
+  margin-top: -10px;
 }
 
 .hero-image img {
   width: 560px;
   max-width: 155%;
+  display: block;
+  object-fit: contain;
   opacity: 0;
-  transform: translateX(50px);
+  transform: translateX(140px); /* sedikit naik */
   animation: slideInRight 1.2s ease-out forwards;
   animation-delay: 0.3s;
 }
+
 /* ====================== RESPONSIVE ====================== */
 @media (max-width: 850px) {
   .hero {
@@ -384,10 +398,10 @@ header {
     width: 340px;
     max-width: 150%;
     opacity: 1;
-    transform: translateX(100px);
+    transform: translateX(50px);
     animation: slideInRight 1.2s ease-out forwards;
     animation-delay: 0.3s;
-    margin-top: -30px; /* ✅ naikkan foto sedikit */
+    margin-top: -40px; /* ✅ naikkan foto sedikit */
   }
 }
 
