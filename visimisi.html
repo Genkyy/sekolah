@@ -274,7 +274,25 @@
         <p>© 2025 SMA Pertiwi Medan.</p>
       </div>
     </footer>
+    <script>
+      // --- NAVBAR MOBILE TOGGLE ---
+      const menuToggle = document.getElementById("menuToggle");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const body = document.body;
 
+      menuToggle.addEventListener("click", function () {
+        mobileMenu.classList.toggle("active");
+        body.classList.toggle("no-scroll"); // supaya tidak bisa scroll saat menu terbuka
+      });
+
+      // Tutup menu jika klik di luar area menu
+      document.addEventListener("click", function (e) {
+        if (!mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+          mobileMenu.classList.remove("active");
+          body.classList.remove("no-scroll");
+        }
+      });
+    </script>
     <!-- JS -->
     <script src="dist/js/script.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

@@ -344,7 +344,6 @@ header {
   flex: 1 1 35%;
   text-align: right;
   position: relative;
-  margin-top: -10px;
 }
 
 .hero-image img {
@@ -401,7 +400,6 @@ header {
     transform: translateX(50px);
     animation: slideInRight 1.2s ease-out forwards;
     animation-delay: 0.3s;
-    margin-top: -40px; /* ✅ naikkan foto sedikit */
   }
 }
 
