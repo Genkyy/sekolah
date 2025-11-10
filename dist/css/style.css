@@ -402,12 +402,18 @@ header {
     max-width: 150%;
     opacity: 1;
     transform: translateX(50px);
-    bottom: -40px;
+    bottom: -30px;
     animation: slideInRight 1.2s ease-out forwards;
     animation-delay: 0.3s;
   }
 }
-
+@media (max-width: 375px) {
+  .hero-image img {
+    width: 320px;
+    transform: translate(160px, -20px); /* naikkan gambar 20px */
+    bottom: -40px; /* sedikit lebih tinggi */
+  }
+}
 /* ====================== ANIMASI ====================== */
 @keyframes fadeUp {
   to {
@@ -521,7 +527,7 @@ header {
   .quick-grid {
     top: -60px;
     padding: 24px;
-    gap: 20px;
+    gap: 10px;
     grid-template-columns: repeat(3, 1fr);
   }
 
@@ -535,12 +541,12 @@ header {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 400px) {
   .quick-grid {
     top: -50px;
     padding: 20px 18px;
     gap: 18px;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .card img {
@@ -1012,6 +1018,9 @@ footer {
 
 /* HP kecil (≤480px) */
 @media (max-width: 480px) {
+  .hero-content .h1 {
+    font-size: 1rem;
+  }
   .sambutan-image img {
     width: 70%;
     max-width: 200px;
