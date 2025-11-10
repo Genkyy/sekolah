@@ -267,6 +267,9 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-bottom: 0; /* hilangkan jarak bawah */
+  margin-bottom: 0;
+  overflow: visible;
 }
 
 /* Overlay hijau */
@@ -344,6 +347,7 @@ header {
   flex: 1 1 35%;
   text-align: right;
   position: relative;
+  z-index: 1;
 }
 
 .hero-image img {
@@ -398,6 +402,7 @@ header {
     max-width: 150%;
     opacity: 1;
     transform: translateX(50px);
+    bottom: -40px;
     animation: slideInRight 1.2s ease-out forwards;
     animation-delay: 0.3s;
   }
@@ -418,12 +423,11 @@ header {
   }
 }
 
-/* ====================== 4. QUICK LINKS ====================== */
 /* ===== QUICK LINKS ===== */
 .quick-links {
   position: relative;
   padding: 0 0 80px;
-  background-color: #e9f6ef; /* lembut, kontras dengan hijau */
+  background-color: #e9f6ef;
 }
 
 .quick-grid {
@@ -439,6 +443,7 @@ header {
   grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
   gap: 28px;
   justify-items: center;
+  z-index: 2;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
@@ -1192,7 +1197,6 @@ footer {
   animation: fadeIn 1.5s ease forwards;
 }
 /* Hero Guru */
-/* Hero Guru - PERBAIKAN LAYOUT TULISAN */
 .guru-hero {
   position: relative;
   height: 55vh;
@@ -1358,43 +1362,44 @@ footer {
   object-fit: cover;
   margin-bottom: 12px;
 }
-
-/* Wali Kelas */
-.wali-section {
+/* ===== OPERATOR SEKOLAH ===== */
+.operator-section {
   padding: 60px 20px;
   background: #fff;
   text-align: center;
 }
-.wali-section h2 span {
+
+.operator-section h2 span {
   color: green;
 }
-.wali-grid {
+
+.operator-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
   margin-top: 30px;
 }
-.wali-card {
+
+.operator-card {
   background: #f9f9ff;
   border-radius: 12px;
-  padding: 15px;
+  padding: 20px;
   text-align: center;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.wali-card img {
-  width: 100px;
-  height: 100px;
+
+.operator-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+.operator-card img {
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 10px;
-}
-.wali-card h3 {
-  font-size: 1rem;
-  font-weight: 400;
-  color: #222;
-  line-height: 1.3;
-  margin-bottom: 6px;
-  white-space: normal;
+  margin-bottom: 12px;
 }
 
 /* Section Guru */
@@ -1425,8 +1430,9 @@ footer {
   display: grid;
   grid-template-columns: repeat(
     auto-fit,
-    minmax(260px, 1fr)
+    minmax(250px, 1fr)
   ); /* lebih lebar, biar tidak gemuk */
+  align-items: stretch;
   gap: 24px;
 }
 
@@ -1445,8 +1451,8 @@ footer {
 }
 
 .guru-card img {
-  width: 100%;
-  height: 220px;
+  width: 80%;
+  height: 200px;
   object-fit: contain; /* biar gambar utuh */
   background: #f9f9f9; /* kasih background supaya rapi */
   border-radius: 10px;
